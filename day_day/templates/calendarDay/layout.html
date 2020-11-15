@@ -1,0 +1,319 @@
+{% load static %}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="{% static '/day_day/staticLayout.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" id="col">  
+                    <div class="row" id="logo-row">
+                        <div class="unselect" id="logo-div">
+                            Calendar
+                        </div>
+                    </div>
+                    <div class="row" id="username-row">
+                        <div class="row" id="username-div">
+                            Hello, <strong> {{user}} </strong>!
+                        </div>
+                    </div>
+                    <div class="row" id="create-row">
+                        <div class="unselect" id="create-div">
+                            <img src="https://i.ibb.co/nfz4GDq/Botao.png" alt="Botao" width="40px" border="0" id="create-image">                    </div>
+                        </div>
+                    <div class="row" id="logout-row">
+                        <div class="row" id="logout-div">
+                            <a class="unselect" href="{% url 'logout' %}">Log-Out</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" id="col-10">
+                    <div class="row" id="date-row">
+                        <div id="date-div">
+                            {{today}}
+                        </div>
+                        <div id="day-div">
+                            {{weekday}}
+                        </div>
+                    </div>
+                    <div class="row-9">
+                        <div id="calendar-div">
+                            <div id="buttons-div">
+                                <div id="day-week-month-div">
+                                    <div class="button-active" id="day-button" style="user-select: none;">
+                                        Day
+                                    </div>
+                                    <div class="button" id="week-button" style="user-select: none;">
+                                        Week
+                                    </div>
+                                    <div class="button" id="month-button" style="user-select: none;">
+                                        Month
+                                    </div>
+                                </div>
+                                <div id="type-div">
+                                    <div class="button-2-active" id="task-button" style="user-select: none;">
+                                        Task
+                                    </div>
+                                    <div class="button-2-active" id="advice-button" style="user-select: none;">
+                                        Advice
+                                    </div>
+                                    <div class="button-2-active" id="appoitment-button" style="user-select: none;">
+                                        Appointment
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="TAA-div">
+                                <div class="div-TAA-create" id="TAAElement">
+                                    <div class="black-step">
+                                        <p class="date-and-time-element">*Date and time*</p>
+                                        <div class="days-week-div">
+                                            <p class="day-week" id="sunday">S</p>
+                                            <p class="day-week" id="monday">M</p>
+                                            <p class="day-week" id="tuesday">T</p>
+                                            <p class="day-week" id="wednesday">W</p>
+                                            <p class="day-week" id="thursday">T</p>
+                                            <p class="day-week" id="friday">F</p>
+                                            <p class="day-week" id="saturday">S</p>
+                                        </div>
+                                    </div>
+                                    <div class="white-step">
+                                        <div class="col" id="left-col">
+                                            <div class="type-priority">
+                                                <p class="element-text">Advice</p>
+                                                <p id="low">Low</p>
+                                            </div>
+                                            <div class="content-element">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col" id="right-col">
+                                            <div class="date-created">
+                                                Date created: *date*
+                                            </div>
+                                            <div class="special-TAA">
+                                                Special atribute
+                                            </div>
+                                            <div class="is-routine">
+                                                Is part of your week routine
+                                            </div>
+                                            <div class="edit-TAA">
+                                                <button type="button" class="btn btn-link">Edit</button>
+                                            </div>
+                                            <div class="remove-TAA">
+                                                <button type="button" class="btn btn-outline-danger btn-sm"><p class="button-text">Delete</p></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="div-TAA-create" id="create-object-div">
+                                    <div class="title-create">
+                                        Create a calendar object:
+                                    </div>
+                                    <div class="white-step">
+                                        <form class="form-create" action="{% url 'index' %}" method="POST">
+                                            {% csrf_token %}
+                                            <div class="create-row" id="left-col">
+                                                <div class="form-group" id="select-type-div">
+                                                    <label for="select-type">Your object will be:</label>
+                                                    <select class="form-control" id="select-type" name="select-type">
+                                                      <option>Advice</option>
+                                                      <option>Appointment</option>
+                                                      <option>Task</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group" id="select-type-div">
+                                                    <label for="select-type">Priority:</label>
+                                                    <select class="form-control" id="select-type" name="select-priority">
+                                                      <option>Low</option>
+                                                      <option>Medium</option>
+                                                      <option>High</option>
+                                                      <option>Very High</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="select-type">Day(s) of the week:</label>
+                                                    <div class="days-week-form">
+                                                        <label class="day-label" for="monday-form">M</label>
+                                                        <input type="checkbox" id="monday-form" name="monday">
+                                                        <label class="day-label" for="tuesday-form">T</label>
+                                                        <input type="checkbox" id="tuesday-form" name="tuesday">
+                                                        <label class="day-label" for="wednesday-form">W</label>
+                                                        <input type="checkbox" id="wednesday-form" name="wednesday">
+                                                        <label class="day-label" for="thursday-form">T</label>
+                                                        <input type="checkbox" id="thursday-form" name="thursday">
+                                                        <label class="day-label" for="friday-form">F</label>
+                                                        <input type="checkbox" id="friday-form" name="friday">
+                                                        <label class="day-label" for="saturday-form">S</label>
+                                                        <input type="checkbox" id="saturday-form" name="saturday">
+                                                        <label class="day-label" for="sunday-form">S</label>
+                                                        <input type="checkbox" id="sunday-form" name="sunday">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="is-routine-form">It's a weekly routine:</label>
+                                                        <input type="checkbox" id="is-routine-form" name="is-routine">
+                                                </div>
+                                            </div>
+                                            <div class="create-row" id="right-col">
+                                                <div class="form-group" id="days-week-div-form">
+                                                    <label>Date / Time:</label>
+                                                    <input class="form-control-2" type="date" id="date-input" name="date">
+                                                    <input class="form-control-2" type="time" id="time-input" name="time">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="content-textarea">Content:</label>
+                                                    <textarea maxlength="75" class="form-control" id="content-textarea" rows="2" name="content"></textarea>
+                                                </div>
+                                                <input type="submit" class="form-submit">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                                <div id="TAA-place">
+                                    <div class="place" id="day-place">
+                                        
+                                        {% if not rows.day.0 %}
+                                            <div class="none-object-TAA">
+                                                Ops! It looks like you have nothing scheduled for today...
+                                            </div>
+                                        {% endif %}
+
+                                        {% for row in rows.day  %}
+
+                                        <div class="row-day">
+
+                                            {% for object in row  %}
+
+                                                <div class="day-TAA" id="{{ object.pk }}" data-type="{{ object.type }}">
+                                                    <div class="black-step">
+                                                        <p class="date-and-time">{{ object.finish_date }}</p>
+                                                    </div>
+                                                    <div class="type">
+                                                        <p>{{ object.type }}</p>
+                                                        <div class="priority" id="{{ object.priority_id }}">
+                                                            <p>{{ object.priority }}</p>
+                                                        </div>
+                                                        <div class="content-day">
+                                                            <p class="content-p-TAA">
+                                                                {{ object.content }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="type-small">
+                                                        <p class="month-text">{{ object.type }}</p>
+                                                        <p class="month-text" id="{{ object.priority_id }}">{{ object.priority }}</p>
+                                                    </div> 
+                                                    <div class="content-day-small">
+                                                        <p class="content-p-small">
+                                                            {{ object.content }}
+                                                        </p>
+                                                    </div> 
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="place" id="week-place">
+
+                                        {% if not rows.week.0 %}
+                                            <div class="none-object-TAA">
+                                                Ops! It looks like you have nothing scheduled for this week...
+                                            </div>
+                                        {% endif %}
+
+                                        {% for row in rows.week  %}
+
+                                        <div class="row-day">
+
+                                            {% for object in row  %}
+
+                                                <div class="day-TAA" id="{{ object.pk }}" data-type="{{ object.type }}">
+                                                    <div class="black-step">
+                                                        <p class="date-and-time">{{ object.finish_date }}</p>
+                                                    </div>
+                                                    <div class="type">
+                                                        <p>{{ object.type }}</p>
+                                                        <div class="priority" id="{{ object.priority_id }}">
+                                                            <p>{{ object.priority }}</p>
+                                                        </div>
+                                                        <div class="content-day">
+                                                            <p class="content-p-TAA">
+                                                                {{ object.content }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="type-small">
+                                                        <p class="month-text">{{ object.type }}</p>
+                                                        <p class="month-text" id="{{ object.priority_id }}">{{ object.priority }}</p>
+                                                    </div> 
+                                                    <div class="content-day-small">
+                                                        <p class="content-p-small">
+                                                            {{ object.content }}
+                                                        </p>
+                                                    </div> 
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
+                                    <div class="place" id="month-place">
+
+                                        {% if not rows.month.0 %}
+                                            <div class="none-object-TAA">
+                                                Ops! It looks like you have nothing scheduled for this month...
+                                            </div>
+                                        {% endif %}
+
+                                        {% for row in rows.month  %}
+
+                                        <div class="row-day">
+
+                                            {% for object in row  %}
+
+                                                <div class="day-TAA" id="{{ object.pk }}" data-type="{{ object.type }}">
+                                                    <div class="black-step">
+                                                        <p class="date-and-time">{{ object.finish_date }}</p>
+                                                    </div>
+                                                    <div class="type">
+                                                        <p>{{ object.type }}</p>
+                                                        <div class="priority" id="{{ object.priority_id }}">
+                                                            <p>{{ object.priority }}</p>
+                                                        </div>
+                                                        <div class="content-day">
+                                                            <p class="content-p-TAA">
+                                                                {{ object.content }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="type-small">
+                                                        <p class="month-text">{{ object.type }}</p>
+                                                        <p class="month-text" id="{{ object.priority_id }}">{{ object.priority }}</p>
+                                                    </div> 
+                                                    <div class="content-day-small">
+                                                        <p class="content-p-small">
+                                                            {{ object.content }}
+                                                        </p>
+                                                    </div> 
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="{% static 'day_day/layout.js' %}"></script>
+</html>

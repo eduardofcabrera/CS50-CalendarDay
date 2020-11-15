@@ -1,0 +1,1053 @@
+#col {
+    background-color: rgb(240, 240, 240);
+    max-width: 16.6666%;
+}
+
+#logo-row {
+    height: 10vw;
+}
+
+#username-row {
+    height: 3vw;
+}
+
+#col-10 {
+    background-color: rgb(250, 250, 250);
+    height: 100vw;
+}
+
+.container {
+    margin: 0px;
+}
+
+#logo-div {
+    margin: 0 auto;
+    padding-top: 15%;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 52px;
+}
+
+#username-div {
+    margin: 0 auto;
+    font-size: 20px;
+    color: #8a2be2;
+}
+
+#logout-div {
+    margin: 0 auto;
+    font-size: 18px;
+    color: royalblue;
+    cursor: pointer;
+}
+
+#logout-div:hover {
+    color: rgb(23, 53, 143);
+}
+
+#create-div {
+    margin: 5% auto;
+}
+
+#create-image:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+}
+
+#date-row {
+    width: 33%;
+}  
+
+#date-div {
+    width: 100%;
+    font-size: 72px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+#day-div {
+    width: 100%;
+    font-size: 50px;
+    color: royalblue;
+    margin-top: -2%;
+    text-align: right;
+}
+
+#calendar-div {
+    margin: 0 auto;
+    width: 90%;
+    height: 90vh;
+}
+
+#day-week-month-div {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#buttons-div {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#type-div {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.button {
+    color: #8a2be2;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: white;
+    margin: 3%;
+    width: 30%;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    color: white;
+    background-color: #8a2be2;
+    border-color: white;
+}
+
+.button-2 {
+    color: royalblue;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: white;
+    margin: 0 3%;
+    width: 30%;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+
+#TAA-place {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(240, 240, 240);
+    border-width: 2px;
+    margin-top: 3%;
+}
+
+#day-place {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#week-place {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#month-place {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.day-TAA {
+    max-width: 20vw;
+    width: 20vw;
+    height: 20vw;
+    text-align: center;
+    margin: 3%;
+    background-color: rgb(240, 240, 240);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0.85;
+}
+
+#day-row {
+    width: 100%;
+}
+
+.row-day {
+    display: flex;
+}
+
+.black-step {
+    display: flex;
+    color: white;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+    height: 20%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#week-row {
+    width: 100%;
+}
+
+.row-week {
+    display: flex;
+}
+
+.week-TAA {
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+    margin: 2%;
+    background-color: rgb(240, 240, 240);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0.85;
+}
+
+.week-TAA:hover, .day-TAA:hover, .month-TAA:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 1;
+}
+
+.row-month {
+    display: flex;
+}
+
+.month-TAA {
+    width: 15vw;
+    height: 5vw;
+    text-align: center;
+    margin: 2%;
+    background-color: rgb(240, 240, 240);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0.85;
+}
+
+.black-step-month {
+    color: white;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+    height: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.button-active {
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: white;
+    margin: 3%;
+    width: 30%;
+    text-align: center;
+    transition: 0.2s ease;
+    color: white;
+    background-color: #8a2be2;
+    border-color: white;
+}
+
+.button-2-active {
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 18px;
+    margin: 0 3%;
+    width: 30%;
+    text-align: center;
+    transition: 0.2s ease;
+    color: white;
+    background-color: royalblue;
+    border-color: rgb(250, 250, 250); 
+}
+
+.button-2-active:hover, .button-2:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#TAA-div {
+    max-height: 400px;
+    width: 100%;
+}
+
+.div-TAA-create {
+    height: 50%;
+    width: 70%;
+    max-height: 400px;
+    margin: 3% auto;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+@keyframes TAA-open {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 50%;
+    }
+}
+
+#TAAElement {
+    display: none;
+    border-color: rgb(240, 240, 240);
+    animation-name: TAA-open;
+    animation-duration: 0s;
+    animation-timing-function: ease;
+} 
+
+#create-object-div {
+    display: none;
+    border-color: #8a2be2;
+}
+
+.title-create {
+    background-color: #8a2be2;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 2%;
+}
+
+.create-row {
+    height: 100%;
+}
+
+.date-and-time {
+    color: white;
+    font-size: 24px;
+    padding: 3%;
+}
+
+.type {
+    margin-bottom: 0;
+    text-align: left;
+    padding-top: 3%;
+    padding-left: 4%;
+    color: royalblue;
+    font-size: 18px;
+}
+
+.priority {
+    margin-top: -6%;
+    padding-top: -3%;
+}
+
+.finished-text {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+#low {
+    color: gold;
+}
+
+#medium {
+    color: orange;
+}
+
+#high {
+    color: darkorange;
+}
+
+#veryhigh {
+    color: orangered;
+}
+
+#is-routine-true {
+    color: green;
+}
+
+#is-routine-false {
+    color: orangered;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.content-day {
+    color: black;
+    font-size: 16px;
+}
+
+
+.date-and-time-month {
+    color: white;
+    font-size: 18px;
+    padding: 3%;
+}
+
+.type-month {
+    width: 65%;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    color: royalblue;
+}
+
+.month-text {
+    margin: 1%;
+}
+
+.date-and-time-element {
+    width: 90%;
+    color: white;
+    padding: 1%;
+    font-size: 32px;
+}
+
+.form-create {
+    width: 100%;
+    display: flex;
+}
+
+.form-group {
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-bottom: 0;
+}
+
+#select-type-div {
+    display: flex;
+}
+
+#select-type {
+    margin-top: -2%;
+    margin-left: 2%;
+    width: 35%;
+    font-size: 14px;
+    padding: 0;
+}
+
+.day-label {
+    font-size: 16px;
+}
+
+.days-week-div-form {
+    margin-bottom: 0;
+}
+
+#date-input {
+    font-size: 14px;
+    width: 40%;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+#time-input {
+    font-size: 14px;
+    width: 20%;
+    margin-top: 0;
+}
+
+.form-control-2 {
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#content-textarea {
+    font-size: 14px;
+    width: 90%;
+    resize: none;
+}
+
+#appoitment-div {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.form-submit {
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #8a2be2;
+    color: #8a2be2;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 70%;    
+}
+
+.form-submit:hover {
+    color: #fff;
+    background-color: #8a2be2;
+}
+
+#left-col {
+    background-color: white;
+    width: 50%;
+}
+
+#right-col {
+    background-color: white;
+    width: 50%;
+}
+
+.white-step {
+    width: 100%;
+    display: flex;
+}
+
+.content-element {
+    font-size: 20px;
+    margin-left: 4%;
+}
+
+.type-priority {
+    font-size: 22px;
+    margin-left: 4%;
+    color: royalblue;
+}
+
+.element-text {
+    margin-top: 2%;
+    margin-bottom: -1%;
+}
+
+.days-week-div {
+    width: 50%;
+    text-align: right;
+    color: white;
+    display: flex;
+    margin: 2%;
+    margin-left: auto;
+    font-size: 22px;
+}
+.day-week {
+    margin-left: 5%;
+    opacity: 0.6;
+}
+
+#active-day {
+    opacity: 1;
+}
+
+.date-created {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+.type-small {
+    display: none;
+}
+
+.is-routine {
+    width: 100%;
+    font-size: 18px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.special-TAA {
+    width: 100%;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.edit-TAA, .remove-TAA {
+    width: 100%;
+    font-size: 16px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.edit-TAA {
+    color: royalblue;
+}
+
+#remove-TAA-link {
+    color: red;
+}
+
+#remove-TAA-link {
+    color: red;
+    text-decoration: red;
+}
+
+
+.button-text {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.content-day-small {
+    display: none;
+}
+
+.none-object-TAA {
+    font-size: 32px;
+    margin: 5% auto;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.unselect {    
+    user-select: none;               
+  }
+
+.content-p-TAA {
+    word-wrap: break-word;
+}
+
+@media (max-width: 1300px) {
+    .day-TAA {
+        height: 23vw;
+    }
+
+    .textarea-content {
+        font-size: 14px;
+    }
+
+    .content-day {
+        font-size: 14px;
+    }
+
+    #col {
+        max-width: 20%;
+        width: 20%;
+    }
+}
+
+@media (max-width: 1195px) {
+
+
+    .type {
+        font-size: 16px;
+    }
+
+    .date-and-time {
+        font-size: 20px;
+    }
+
+    #col-10 {
+        margin: 0 auto;
+    }
+
+    #date-row {
+        width: 100%;
+    }
+
+    #date-div{
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    #day-div {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .div-TAA-create {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1110px) {
+
+    #col {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .day-TAA {
+        max-width: 30vw;
+        width: 30vw;
+    }
+
+    #logo-div {
+        padding-top: 1%;
+        font-size: 80px;
+    }
+
+    #username-div {
+        font-size: 36px;
+        height: max-content;
+    }
+
+    #create-div {
+        margin: 3% auto;
+    }
+
+    img {
+        width: 60px;
+    }
+
+    #logout-div {
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    #calendar-div {
+        width: 100%;
+    }
+
+    .day-TAA {
+        height: 25vw;
+    }
+
+    #logo-div {
+        padding-top: 1%;
+        font-size: 80px;
+    }
+
+    #logo-row {
+        margin-bottom: 2%;
+    }
+
+    #username-div {
+        font-size: 24px;
+        height: max-content;
+    }
+
+    #create-div {
+        margin: 3% auto;
+    }
+
+    img {
+        width: 40px;
+    }
+
+    .textarea-content {
+        font-size: 13px;
+    }
+
+
+}
+
+@media (max-width: 850px) {
+
+    .content-p-small {
+        max-width: 90%;
+        word-break: break-word;
+    }
+
+    .day-TAA {
+        max-width: 80vw;
+        height: 20vw;
+        width: 80vw;
+        margin: 5% auto;
+    }
+
+    .black-step {
+        height: 30%;
+    }
+
+    .date-and-time {
+        padding: 2%;
+    }
+
+    .row-day {
+        display: inline;
+    }
+
+    .type {
+        display: none;
+    }
+
+    .type-small {
+        display: block;
+        width: 100%;
+        display: flex;
+        text-align: left;
+        color: royalblue;
+        padding: 1%;
+        padding-bottom: 0;
+        font-size: 20px;
+    }
+
+    .text-small {
+        margin-right: 1%;
+        margin-bottom: 1%;
+    }
+
+    .content-day-small {
+        display: block;
+        text-align: left;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .date-and-time-element {
+        font-size: 38px;
+        margin-bottom: 0;
+        padding: 2%;
+    }
+
+    .days-week-div {
+        font-size: 30px;
+        margin: 3%;
+    }
+
+    .date-created {
+        margin-top: 3%;
+    }
+
+    .none-object-TAA {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .day-TAA {
+        height: 25vw;
+    }
+
+    #TAA-div {
+        max-height: 800px;
+        height: max-content;
+    }
+
+    .div-TAA-create {
+        max-height: 800px;
+        height: max-content;
+    }
+
+    .white-step {
+        display: block;
+    }
+
+    #left-col {
+        width: 100%;
+    }
+
+    #right-col {
+        width: 100%;
+    }
+
+    .date-created, .special-TAA, .is-routine {
+        font-size: 18px;
+        margin-left: 4%;
+        width: max-content;
+    }
+
+    #remove-button, #edit-button {
+        position: absolute;
+        right: 5vw;
+    }
+
+    #edit-button {
+        top: 10%;
+    }
+
+    #remove-button {
+        top: 50%;
+    }
+
+    .date-and-time-element {
+        font-size: 32px;
+    }
+
+    .days-week-div {
+        font-size: 22px;
+    }
+
+    #logo-row {
+        margin-bottom: 8%;
+    }
+
+    #create-div {
+        margin: 5% auto;
+    }
+
+    .form-create {
+        display: block;
+    }
+
+    .form-submit {
+        margin-left: 80%;
+    }
+
+    .none-object-TAA {
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    .date-and-time-element {
+        font-size: 28px;
+    }
+
+    .days-week-div {
+        font-size: 18px;
+    }
+
+    .day-TAA {
+        height: 35vw;
+    }
+
+    .none-object-TAA {
+        font-size: 18px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .date-and-time-element {
+        font-size: 24px;
+    }
+
+    .days-week-div {
+        font-size: 18px;
+    }
+
+    .day-TAA {
+        height: 40vw;
+    }
+
+    .button-active, .button, .button-2, .button-2-active {
+        font-size: 14px;
+        border-radius: 7px;
+        border-width: 2px;
+    }
+
+    #logo-row {
+        margin-bottom: 12%;
+    }
+
+    #create-div {
+        margin: 8% auto;
+    }
+
+    img {
+        width: 50px;
+    }
+
+    .content-element {
+        font-size: 18px;
+    }
+
+    .date-created, .special-TAA, .is-routine {
+        font-size: 16px;
+    }
+
+    .type-priority {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .date-and-time-element {
+        font-size: 20px;
+    }
+
+    .days-week-div {
+        font-size: 14px;
+    }
+
+    .day-TAA {
+        height: 50vw;
+    }
+
+    .button-active, .button, .button-2, .button-2-active {
+        font-size: 12px;
+    }
+
+    #logo-row {
+        margin-bottom: 16%;
+    }
+
+    #create-div {
+        margin: 12% auto;
+    }
+
+    .content-element {
+        font-size: 16px;
+    }
+
+    .date-created, .special-TAA, .is-routine {
+        font-size: 14px;
+    }
+
+    .type-priority {
+        font-size: 18px;
+    }
+
+    #date-row {
+        margin: 0;
+    }
+
+    #date-div {
+        font-size: 52px;
+    }
+
+    #day-div {
+        font-size: 38px;
+    }
+
+    .form-submit {
+        margin-left: 70%;
+        color: white;
+        background-color: #8a2be2;
+    }
+
+    .title-create {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .date-and-time-element {
+        font-size: 18px;
+    }
+
+    .days-week-div {
+        font-size: 12px;
+    }
+
+    .day-TAA {
+        height: 60vw;
+    }
+
+    #logo-row {
+        margin-bottom: 22%;
+    }
+
+    #create-div {
+        margin: 14% auto;
+    }
+
+    .date-created, .special-TAA, .is-routine {
+        font-size: 12px;
+    }
+
+    .btn-link {
+        top: 5%;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .day-TAA {
+        height: 70vw;
+    }
+}
